@@ -60,7 +60,7 @@ export const livestockQualities = [
 ];
 
 export const services = [
-  { title: "European Export", text: "Sheep and cattle export to European markets." },
+  { title: "European Export", text: "Cattle export to European markets." },
   { title: "Import Services", text: "Import services for UK and Irish buyers." },
   { title: "Full Compliance", text: "Fully compliant transport and health certification." },
   { title: "Logistics", text: "Reliable logistics and professional coordination." },

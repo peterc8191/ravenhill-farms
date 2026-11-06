@@ -10,7 +10,7 @@ export default function About() {
         <div className="prose">
           <p>
             Ravenhill Farms is a fifth&#8209;generation family farm rooted in the heart of Northern
-            Ireland, specialising in premium sheep and cattle farming alongside trusted livestock import
+            Ireland, specialising in premium cattle farming alongside trusted livestock import
             and export services. For over a century, our family has worked the land, raised quality
             livestock, and built a reputation for reliability, integrity, and exceptional standards in
             agricultural trade.

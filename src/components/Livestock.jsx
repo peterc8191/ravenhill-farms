@@ -14,10 +14,10 @@ export default function Livestock() {
           </ul>
         </div>
         <div>
-          <SectionHead eyebrow="Sheep & Cattle" title="Livestock Farming" />
+          <SectionHead eyebrow="Cattle" title="Livestock Farming" />
           <div className="prose">
             <p>
-              We specialise in raising healthy, well&#8209;bred sheep and cattle suited for both domestic
+              We specialise in raising healthy, well&#8209;bred cattle suited for both domestic
               and international markets. Our animals are reared on clean pastureland, managed with expert
               care, and monitored to ensure full traceability from farm to buyer.
             </p>
