@@ -7,6 +7,7 @@ import Livestock from "./components/Livestock.jsx";
 import Trade from "./components/Trade.jsx";
 import HomeTrade from "./components/HomeTrade.jsx";
 import Farms from "./components/Farms.jsx";
+import Gallery from "./components/Gallery.jsx";
 import Facebook from "./components/Facebook.jsx";
 import WhyUs from "./components/WhyUs.jsx";
 import Contact from "./components/Contact.jsx";
@@ -15,7 +16,7 @@ import useReveal from "./hooks/useReveal.js";
 
 export default function App() {
   useReveal(
-    ".section-head, .two-col > *, .value-card, .service-card, .why-grid li, .heritage-quote, .stat"
+    ".section-head, .two-col > *, .value-card, .service-card, .why-grid li, .heritage-quote, .stat, .gallery-grid li"
   );
 
   return (
@@ -30,6 +31,7 @@ export default function App() {
         <HomeTrade />
         <Trade />
         <Farms />
+        <Gallery />
         <Facebook />
         <WhyUs />
         <Contact />

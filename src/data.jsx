@@ -1,3 +1,5 @@
+import { photos } from "./components/Gallery.jsx";
+
 export const navLinks = [
   { href: "#about", label: "About" },
   { href: "#heritage", label: "Heritage" },
@@ -5,6 +7,8 @@ export const navLinks = [
   { href: "#home-trade", label: "Home Trade" },
   { href: "#trade", label: "Import & Export" },
   { href: "#keady", label: "Our Farms" },
+  // The gallery only shows (and is only linked) once there are photos in src/assets/gallery/
+  ...(photos.length ? [{ href: "#gallery", label: "Gallery" }] : []),
   { href: "#contact", label: "Contact", cta: true },
 ];
 
