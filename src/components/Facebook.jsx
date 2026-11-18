@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react";
 import { facebookUrl } from "../data.jsx";
 
 export function FacebookIcon(props) {
@@ -8,23 +9,73 @@ export function FacebookIcon(props) {
   );
 }
 
+const EMBED_HEIGHT = 600;
+
+// Facebook's Page Plugin only accepts widths from 180px to 500px and doesn't resize itself,
+// so measure the container and rebuild the iframe URL when the width changes.
+function FacebookPageEmbed() {
+  const boxRef = useRef(null);
+  const [width, setWidth] = useState(500);
+
+  useEffect(() => {
+    const box = boxRef.current;
+    if (!box) return;
+    const measure = () => {
+      const w = Math.round(Math.min(500, Math.max(180, box.clientWidth)));
+      setWidth((prev) => (Math.abs(prev - w) > 10 ? w : prev));
+    };
+    measure();
+    const observer = new ResizeObserver(measure);
+    observer.observe(box);
+    return () => observer.disconnect();
+  }, []);
+
+  const params = new URLSearchParams({
+    href: facebookUrl,
+    tabs: "timeline",
+    width: String(width),
+    height: String(EMBED_HEIGHT),
+    small_header: "false",
+    adapt_container_width: "true",
+    hide_cover: "false",
+    show_facepile: "true",
+  });
+
+  return (
+    <div className="fb-embed" ref={boxRef}>
+      <iframe
+        key={width}
+        title="Ravenhill Livestock on Facebook"
+        src={`https://www.facebook.com/plugins/page.php?${params}`}
+        width={width}
+        height={EMBED_HEIGHT}
+        style={{ border: "none", overflow: "hidden" }}
+        scrolling="no"
+        allow="encrypted-media; clipboard-write; web-share"
+        loading="lazy"
+      ></iframe>
+    </div>
+  );
+}
+
 export default function Facebook() {
   return (
     <section className="section section-social" id="facebook">
-      <div className="container social-inner">
-        <FacebookIcon className="social-icon" />
-        <div className="section-head center">
+      <div className="container two-col social-inner">
+        <div className="social-copy">
+          <FacebookIcon className="social-icon" />
           <p className="eyebrow light">Stay Connected</p>
           <h2>Follow Us on Facebook</h2>
-          <div className="divider center" aria-hidden="true"></div>
+          <div className="divider" aria-hidden="true"></div>
           <p className="lead">
             See our latest cattle, farm news and upcoming shipments on our Facebook page.
           </p>
+          <a href={facebookUrl} className="btn btn-facebook" target="_blank" rel="noopener noreferrer">
+            <FacebookIcon className="btn-icon" />
+            Visit Ravenhill Livestock on Facebook
+          </a>
         </div>
-        <a href={facebookUrl} className="btn btn-facebook" target="_blank" rel="noopener noreferrer">
-          <FacebookIcon className="btn-icon" />
-          Visit Ravenhill Livestock on Facebook
-        </a>
+        <FacebookPageEmbed />
       </div>
     </section>
   );
