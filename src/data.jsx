@@ -97,10 +97,9 @@ export const homeTrade = [
   { title: "Delivered with Care", text: "Transport arranged to your farm, handled with high welfare standards." },
 ];
 
-// TODO: replace the email placeholder with a real address
 export const contactDetails = [
   { label: "Farms", value: "Keady, Co. Armagh · Castleblayney, Co. Monaghan" },
   { label: "Phone (UK)", value: phones.uk.display, href: phones.uk.href },
   { label: "Phone (IE)", value: phones.ie.display, href: phones.ie.href },
-  { label: "Email", value: "[Email address]" },
+  { label: "Email", value: "conorohara18@gmail.com", href: "mailto:conorohara18@gmail.com" },
 ];
