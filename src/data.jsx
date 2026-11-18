@@ -2,12 +2,20 @@ export const navLinks = [
   { href: "#about", label: "About" },
   { href: "#heritage", label: "Heritage" },
   { href: "#livestock", label: "Livestock" },
+  { href: "#home-trade", label: "Home Trade" },
   { href: "#trade", label: "Import & Export" },
-  { href: "#why", label: "Why Us" },
+  { href: "#keady", label: "Our Farms" },
   { href: "#contact", label: "Contact", cta: true },
 ];
 
-export const footerLinks = navLinks.filter((l) => l.href !== "#why");
+export const footerLinks = navLinks;
+
+export const facebookUrl = "https://www.facebook.com/ravenhilllivestock";
+
+export const phones = {
+  uk: { label: "UK", display: "07849 365687", href: "tel:+447849365687" },
+  ie: { label: "Ireland", display: "087 964 4831", href: "tel:+353879644831" },
+};
 
 export const stats = [
   { value: "5", label: "Generations of farming" },
@@ -82,9 +90,17 @@ export const enquiryTypes = [
   "General enquiry",
 ];
 
-// TODO: replace these placeholders with real contact details
+export const homeTrade = [
+  { title: "Local Supply", text: "Quality cattle supplied to farmers across Northern Ireland and Ireland." },
+  { title: "Sourced to Order", text: "Stock selected to suit each buyer's requirements." },
+  { title: "Fully Traceable", text: "Complete health and movement paperwork with every animal." },
+  { title: "Delivered with Care", text: "Transport arranged to your farm, handled with high welfare standards." },
+];
+
+// TODO: replace the email placeholder with a real address
 export const contactDetails = [
-  { label: "Location", value: "Northern Ireland" },
-  { label: "Phone", value: "[Phone number]" },
+  { label: "Farms", value: "Keady, Co. Armagh · Castleblayney, Co. Monaghan" },
+  { label: "Phone (UK)", value: phones.uk.display, href: phones.uk.href },
+  { label: "Phone (IE)", value: phones.ie.display, href: phones.ie.href },
   { label: "Email", value: "[Email address]" },
 ];

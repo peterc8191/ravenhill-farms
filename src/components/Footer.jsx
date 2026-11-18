@@ -1,4 +1,5 @@
-import { footerLinks } from "../data.jsx";
+import { facebookUrl, footerLinks } from "../data.jsx";
+import { FacebookIcon } from "./Facebook.jsx";
 
 const logo = `${import.meta.env.BASE_URL}images/logo.jpg`;
 
@@ -16,6 +17,10 @@ export default function Footer() {
               {label}
             </a>
           ))}
+          <a href={facebookUrl} target="_blank" rel="noopener noreferrer" className="footer-social">
+            <FacebookIcon className="footer-social-icon" />
+            Facebook
+          </a>
         </nav>
         <p className="copyright">&copy; {new Date().getFullYear()} Ravenhill Farms. All rights reserved.</p>
       </div>

@@ -22,10 +22,10 @@ export default function Contact() {
             to hear from you.
           </p>
           <ul className="contact-list">
-            {contactDetails.map(({ label, value }) => (
+            {contactDetails.map(({ label, value, href }) => (
               <li key={label}>
                 <strong>{label}</strong>
-                <span>{value}</span>
+                {href ? <a href={href}>{value}</a> : <span>{value}</span>}
               </li>
             ))}
           </ul>
