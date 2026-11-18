@@ -16,7 +16,7 @@ import useReveal from "./hooks/useReveal.js";
 
 export default function App() {
   useReveal(
-    ".section-head, .two-col > *, .value-card, .service-card, .why-grid li, .heritage-quote, .stat, .gallery-grid li"
+    ".section-head, .two-col > *, .value-card, .service-card, .why-grid li, .heritage-quote, .stat, .slideshow"
   );
 
   return (
