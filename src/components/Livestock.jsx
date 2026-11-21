@@ -17,7 +17,7 @@ export default function Livestock() {
           <SectionHead eyebrow="Cattle" title="Livestock Farming" />
           <div className="prose">
             <p>
-              We specialise in raising healthy, well&#8209;bred cattle suited for both domestic
+              We specialise in raising healthy, well&#8209;bred calves, weanlings and cattle suited for both domestic
               and international markets. Our animals are reared on clean pastureland, managed with expert
               care, and monitored to ensure full traceability from farm to buyer.
             </p>

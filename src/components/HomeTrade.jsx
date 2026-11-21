@@ -8,7 +8,7 @@ export default function HomeTrade() {
         <div className="section-head center">
           <SectionHead eyebrow="Northern Ireland · Ireland" title="Home Trade" center>
             <p className="lead">
-              Alongside our export work, we supply quality cattle to farmers and buyers closer to home.
+              Alongside our export work, we supply quality calves, weanlings and cattle to farmers and buyers closer to home.
               Whether you&rsquo;re building up a herd or need stock for finishing, we&rsquo;ll source the
               right animals and handle everything from selection to delivery.
             </p>

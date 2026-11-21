@@ -10,7 +10,7 @@ export default function Hero() {
             Suppliers of <span>Quality Livestock</span>
           </h1>
           <p className="hero-lead">
-            Premium cattle, raised with care on clean pastureland &mdash; and trusted import
+            Top quality calves, weanlings and cattle, raised with care on clean pastureland &mdash; and trusted import
             and export services connecting the UK, Ireland and Europe.
           </p>
           <div className="hero-actions">
