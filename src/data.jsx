@@ -6,7 +6,7 @@ export const navLinks = [
   { href: "#livestock", label: "Livestock" },
   { href: "#home-trade", label: "Home Trade" },
   { href: "#trade", label: "Import & Export" },
-  { href: "#keady", label: "Our Farms" },
+  { href: "#farms", label: "Our Farms" },
   // The gallery only shows (and is only linked) once there are photos in src/assets/gallery/
   ...(photos.length ? [{ href: "#gallery", label: "Gallery" }] : []),
   { href: "#contact", label: "Contact", cta: true },
@@ -102,7 +102,7 @@ export const homeTrade = [
 ];
 
 export const contactDetails = [
-  { label: "Farms", value: "Keady, Co. Armagh · Castleblayney, Co. Monaghan" },
+  { label: "Farms", value: "United Kingdom & Ireland" },
   { label: "Phone (UK)", value: phones.uk.display, href: phones.uk.href },
   { label: "Phone (IE)", value: phones.ie.display, href: phones.ie.href },
   { label: "Email", value: "conorohara18@gmail.com", href: "mailto:conorohara18@gmail.com" },

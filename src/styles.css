@@ -545,6 +545,15 @@ h3 { font-size: 1.15rem; }
 .form-status { margin: 1rem 0 0; text-align: center; color: var(--brown); font-style: italic; }
 
 /* Farms */
+.farm-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 960px;
+  margin-inline: auto;
+}
+.farm-text { color: var(--muted); margin: 0 0 0.5rem; }
+@media (max-width: 760px) { .farm-cards { grid-template-columns: 1fr; } }
 .farm-card h3 { margin-bottom: 1rem; }
 .farm-details { list-style: none; margin: 0 0 1.75rem; padding: 0; }
 .farm-details li {
